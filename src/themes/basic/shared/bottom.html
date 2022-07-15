@@ -1,0 +1,22 @@
+	<!-- Eksternal Js -->
+  <!-- <script src=""></script> -->
+	<!-- <script src=""></script> -->
+  <!-- End Vendor Js -->
+
+  <!-- CDN Plugin Js -->
+  <!-- End CDN Plugin Js -->
+
+  <!-- Main.Js -->
+	<script src="./assets/js/main.js"></script>
+  <!-- End Main.Js -->
+
+  <!-- Additional Internal Js -->
+  @@if (context.scripts) {
+    @@for(var i=0;i < scripts.length;i++) {
+      <script src="`+scripts[i]+`" type="text/javascript"></script>
+    }
+  }
+  <!-- End Additional Internal Js -->
+    
+  </body>
+</html>

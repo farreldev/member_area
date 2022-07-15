@@ -1,0 +1,105 @@
+@@include('./themes/basic/shared/top.html')
+@@include('./themes/basic/components/sidebar.html')
+
+<main>
+    <div class="dashboard">
+
+        <div class="topbar">
+            <!-- Left -->
+            <div class="left">
+                <span class="toggle inline-block cursor-pointer text-gray-500" onclick="app.toggle()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </span>
+            </div>
+            <!-- End Left -->
+
+            <!-- Center -->
+            <div class="center">
+                <label for="" class="flex items-center text-gray-500 bg-gray-50 border border-gray-300 py-1 pl-3 pr-3 rounded-full">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </span>
+                    <input type="text" class="focus:outline-none bg-transparent pl-2 w-full" name="" id="" placeholder="Search..">
+                </label>
+            </div>
+            <!-- End Center -->
+
+            <!-- Right -->
+            <div class="right text-right">
+                <div class="overflow-hidden inline-block">
+                    <img class="w-10 h-10 rounded-full" src="https://i.pravatar.cc/100?u=a042581f4e29026704d" alt="">
+                </div>
+            </div>
+            <!-- End Right -->
+
+        </div>
+
+        <div class="content-area">
+            <div class="card-box gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 grid-cols-4 mb-5">
+                <div class="group card-item border border-gray-100 shadow-lg flex items-center justify-between hover:bg-indigo-500">
+                    <div>
+                        <strong class="text-3xl mb-1 block text-indigo-500 group-hover:text-white">1,504</strong>
+                        <span class="text-lg text-gray-700 group-hover:text-white">Daily Views</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-white xl:mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 xl:h-7 xl:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                    </div>
+                </div>
+                <div class="group card-item border border-gray-100 shadow-lg flex items-center justify-between hover:bg-indigo-500">
+                    <div>
+                        <strong class="text-3xl mb-1 block text-indigo-500 group-hover:text-white">2,300</strong>
+                        <span class="text-lg text-gray-700 group-hover:text-white">Sales</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-white xl:mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 xl:h-7 xl:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                    </div>
+                </div>
+                <div class="group card-item border border-gray-100 shadow-lg flex items-center justify-between hover:bg-indigo-500">
+                    <div>
+                        <strong class="text-3xl mb-1 block text-indigo-500 group-hover:text-white">550</strong>
+                        <span class="text-lg text-gray-700 group-hover:text-white">Comments</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-white xl:mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 xl:h-7 xl:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                          </svg>
+                    </div>
+                </div>
+                <div class="group card-item border border-gray-100 shadow-lg flex items-center justify-between hover:bg-indigo-500">
+                    <div>
+                        <strong class="text-3xl mb-1 block text-indigo-500 group-hover:text-white">$10,700</strong>
+                        <span class="text-lg text-gray-700 group-hover:text-white">Earning</span>
+                    </div>
+                    <div class="text-gray-400 group-hover:text-white xl:mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 xl:h-7 xl:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="card-box grid-cols-4 gap-5">
+                <div class="card-item lg:col-span-full xl:col-span-2 2xl:col-span-3 bg-white shadow-lg">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam ullam magnam odio, minus, nulla, cum adipisci fugiat facere ducimus earum iste. Explicabo deserunt voluptate, cupiditate animi, totam numquam unde quidem voluptatibus obcaecati id accusantium doloribus incidunt a pariatur voluptatem quae dolorum quisquam eum culpa atque, magnam maxime quo. Cupiditate, sapiente!</p>
+                </div>
+                <div class="card-item bg-white shadow-lg lg:col-span-full xl:col-span-2">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi necessitatibus ipsa, atque, odit quia ullam, sit porro dolor commodi provident facere. Suscipit asperiores ipsum quae tempora assumenda, corporis necessitatibus eveniet consequuntur ut unde laudantium adipisci, impedit animi facilis odit a reprehenderit enim magnam sed. Quaerat minima in velit at. Temporibus ipsa nemo optio quae. Nulla voluptatum iste explicabo reiciendis velit labore odit optio dicta voluptates, alias provident consequuntur. Dolorem odio mollitia, fugiat ratione aspernatur deserunt sequi molestias debitis totam quisquam labore incidunt quas libero ut assumenda facilis quaerat corrupti. Cumque, qui. Corporis aliquam officia dolores nam consequatur deleniti maiores eveniet.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+@@include('./themes/basic/shared/bottom.html')

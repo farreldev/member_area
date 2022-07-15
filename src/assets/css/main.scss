@@ -1,0 +1,95 @@
+//All styles can be added here.
+
+.nav-aside {
+    @apply fixed w-80 h-full bg-indigo-500 transition-all duration-500 ease-in-out overflow-hidden sm:-left-80 md:-left-80 lg:w-64 z-[2];
+    .top-nav {
+        @apply p-2 m-4 mb-5 shadow-md rounded-lg bg-indigo-100 flex justify-between items-center;
+        .brand {
+            @apply flex items-center space-x-2 text-indigo-500;
+            span {
+                @apply font-semibold uppercase;
+            }
+        }
+        .close {
+            @apply hidden sm:flex rounded-full text-indigo-700;
+        }
+    }
+    ul.vertical-nav {
+        // @apply absolute top-0 left-0 w-full border-l-[10px] border-indigo-500;
+        @apply relative w-full border-l-[10px] border-indigo-500;
+        li {
+            @apply relative w-full rounded-l-full;
+            a {
+                @apply flex items-center space-x-2 decoration-0 text-white;
+                span {
+                    &:first-child {
+                        @apply relative min-w-[50px] h-[50px] flex items-center justify-center text-center;
+                    }
+                }
+                &::before,
+                &::after {
+                    @apply absolute content-[''] w-[45px] h-[45px] right-0 rounded-full pointer-events-none;
+                }
+                &::before {
+                    @apply top-[-45px];
+                }
+                &::after {
+                    @apply bottom-[-45px];
+                }
+            }
+            &.active,
+            &:hover {
+                @apply bg-gray-50;
+                span {
+                    @apply text-indigo-500;
+                }
+                a::before,
+                a::after {
+                    @apply bg-transparent;
+                }
+                a::before {
+                    @apply shadow-[20px_20px_0_0_#F9FAFB];
+                }
+                a::after {
+                    @apply shadow-[20px_-20px_0_0_#F9FAFB];
+                }
+            }
+        }
+    }
+    &.roll {
+        @apply w-16 sm:w-full sm:left-0 md:w-16 md:left-0;
+        .top-nav {
+            @apply p-2 m-3 mb-5 rounded-md block sm:flex sm:justify-between sm:items-center;
+            .brand {
+                span {
+                    @apply hidden sm:block;
+                }
+            }
+        }
+    }
+}
+
+.card-box {
+    @apply grid;
+    .card-item {
+        @apply relative p-4 rounded-lg;
+    }
+}
+
+main {
+    @apply bg-gray-50 absolute left-80 w-[var(--mw)] md:left-0 md:w-full lg:left-64 lg:w-[var(--mwt)] min-h-screen transition-all duration-500 ease-in-out;
+    .topbar {
+        @apply p-5 bg-gray-50 flex justify-between items-center;
+        .left,
+        .center,
+        .right {
+            @apply flex-1;
+        }
+    }
+    .content-area {
+        @apply p-5 overflow-y-auto;
+    }
+    &.roll {
+        @apply w-[var(--mwr)] left-16 sm:-left-full;
+    }
+}

@@ -1,0 +1,60 @@
+.nav-aside {
+  @apply fixed w-80 h-full bg-indigo-500 transition-all duration-500 ease-in-out overflow-hidden sm:-left-80 md:-left-80 lg:w-64 z-[2]; }
+  .nav-aside .top-nav {
+    @apply p-2 m-4 mb-5 shadow-md rounded-lg bg-indigo-100 flex justify-between items-center; }
+    .nav-aside .top-nav .brand {
+      @apply flex items-center space-x-2 text-indigo-500; }
+      .nav-aside .top-nav .brand span {
+        @apply font-semibold uppercase; }
+    .nav-aside .top-nav .close {
+      @apply hidden sm:flex rounded-full text-indigo-700; }
+  .nav-aside ul.vertical-nav {
+    @apply relative w-full border-l-[10px] border-indigo-500; }
+    .nav-aside ul.vertical-nav li {
+      @apply relative w-full rounded-l-full; }
+      .nav-aside ul.vertical-nav li a {
+        @apply flex items-center space-x-2 decoration-0 text-white; }
+        .nav-aside ul.vertical-nav li a span:first-child {
+          @apply relative min-w-[50px] h-[50px] flex items-center justify-center text-center; }
+        .nav-aside ul.vertical-nav li a::before, .nav-aside ul.vertical-nav li a::after {
+          @apply absolute content-[''] w-[45px] h-[45px] right-0 rounded-full pointer-events-none; }
+        .nav-aside ul.vertical-nav li a::before {
+          @apply top-[-45px]; }
+        .nav-aside ul.vertical-nav li a::after {
+          @apply bottom-[-45px]; }
+      .nav-aside ul.vertical-nav li.active, .nav-aside ul.vertical-nav li:hover {
+        @apply bg-gray-50; }
+        .nav-aside ul.vertical-nav li.active span, .nav-aside ul.vertical-nav li:hover span {
+          @apply text-indigo-500; }
+        .nav-aside ul.vertical-nav li.active a::before,
+        .nav-aside ul.vertical-nav li.active a::after, .nav-aside ul.vertical-nav li:hover a::before,
+        .nav-aside ul.vertical-nav li:hover a::after {
+          @apply bg-transparent; }
+        .nav-aside ul.vertical-nav li.active a::before, .nav-aside ul.vertical-nav li:hover a::before {
+          @apply shadow-[20px_20px_0_0_#F9FAFB]; }
+        .nav-aside ul.vertical-nav li.active a::after, .nav-aside ul.vertical-nav li:hover a::after {
+          @apply shadow-[20px_-20px_0_0_#F9FAFB]; }
+  .nav-aside.roll {
+    @apply w-16 sm:w-full sm:left-0 md:w-16 md:left-0; }
+    .nav-aside.roll .top-nav {
+      @apply p-2 m-3 mb-5 rounded-md block sm:flex sm:justify-between sm:items-center; }
+      .nav-aside.roll .top-nav .brand span {
+        @apply hidden sm:block; }
+
+.card-box {
+  @apply grid; }
+  .card-box .card-item {
+    @apply relative p-4 rounded-lg; }
+
+main {
+  @apply bg-gray-50 absolute left-80 w-[var(--mw)] md:left-0 md:w-full lg:left-64 lg:w-[var(--mwt)] min-h-screen transition-all duration-500 ease-in-out; }
+  main .topbar {
+    @apply p-5 bg-gray-50 flex justify-between items-center; }
+    main .topbar .left,
+    main .topbar .center,
+    main .topbar .right {
+      @apply flex-1; }
+  main .content-area {
+    @apply p-5 overflow-y-auto; }
+  main.roll {
+    @apply w-[var(--mwr)] left-16 sm:-left-full; }
